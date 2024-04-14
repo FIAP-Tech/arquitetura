@@ -1,0 +1,316 @@
+<mxfile host="Electron" modified="2024-04-14T19:36:04.720Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="l_WJRJfQCw_QCTAk-BcK" version="24.2.5" type="device">
+  <diagram name="Página-1" id="X4yGat1UL4yKTtZNy6NT">
+    <mxGraphModel dx="2937" dy="1238" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GviSDebqHvodrFMelNdd-101" target="Z1I42a4XKH3U9Z4pWpdQ-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="165" y="940" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="590" y="1140" />
+              <mxPoint x="190" y="1140" />
+              <mxPoint x="190" y="970" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-8" value="Confirmar pagamento ou&lt;div&gt;mostrar pagamento negado&lt;/div&gt;&lt;div&gt;via email&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Z1I42a4XKH3U9Z4pWpdQ-7">
+          <mxGeometry x="-0.1924" y="-3" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-11" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b&gt;Microsserviço Clientes&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;GET /clientes&lt;br&gt;GET /clientes/{id}&lt;br&gt;POST /clientes&lt;br&gt;PUT /clientes/{id}&lt;br&gt;DELETE /clientes/{id}&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="10" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-23" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b&gt;Microsserviço Produtos&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;GET /produtos&lt;br&gt;GET /produtos/{id}&lt;br&gt;POST /produtos&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;GET /produtos/{id}/estoque&lt;br&gt;PUT /produtos/{id}&lt;br&gt;DELETE /produtos/{id}&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b&gt;Spring Batch&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;POST /produtos/carga:&amp;nbsp;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;i&gt;Importar dados em massa para o catálogo de produtos.&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="10" width="120" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-35" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b&gt;Microsserviço Pedidos&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;GET /pedidos&lt;br&gt;GET /pedidos/{id}&lt;br&gt;POST /pedidos&lt;br&gt;PUT /pedidos/{id}&lt;br&gt;DELETE /pedidos/{id}&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="292" y="10" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-38" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b&gt;Microsserviço Entregas&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;GET /entregas&lt;br&gt;GET /entregas/{id}&lt;br&gt;POST /entregas&lt;br&gt;PUT /entregas/{id}&lt;br&gt;DELETE /entregas/{id}&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="10" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="GviSDebqHvodrFMelNdd-61" target="GviSDebqHvodrFMelNdd-79" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="310.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-67" value="Cadastra todos produtos.&lt;div&gt;Individualmente ou&lt;/div&gt;&lt;div&gt;por Lote.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-66" vertex="1" connectable="0">
+          <mxGeometry x="-0.2949" y="2" relative="1" as="geometry">
+            <mxPoint x="45" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-61" value="Usuário&lt;div&gt;da&lt;/div&gt;&lt;div&gt;Empresa&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="280.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-79" target="GviSDebqHvodrFMelNdd-82" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-79" target="GviSDebqHvodrFMelNdd-129" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="240" />
+              <mxPoint x="769" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-135" value="Verifica cache redis" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-134" vertex="1" connectable="0">
+          <mxGeometry x="-0.3346" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-79" value="Produtos" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="280.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-82" value="&lt;div&gt;RDS&lt;/div&gt;db_produtos" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.rds;fillColor=#2E73B8;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="554" y="270" width="72" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="GviSDebqHvodrFMelNdd-86" target="GviSDebqHvodrFMelNdd-88" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="470.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-85" value="Cliente se cadastra no e-commerce" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-84" vertex="1" connectable="0">
+          <mxGeometry x="-0.2949" y="2" relative="1" as="geometry">
+            <mxPoint x="39" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="GviSDebqHvodrFMelNdd-86" target="GviSDebqHvodrFMelNdd-96" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="35" y="626" />
+              <mxPoint x="190" y="626" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-99" value="- Cliente faz pedido no e-commerce&lt;div&gt;e verifica estoque dos produtos.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-98" vertex="1" connectable="0">
+          <mxGeometry x="0.2125" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-86" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="440.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-87" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-88" target="GviSDebqHvodrFMelNdd-89" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-88" target="GviSDebqHvodrFMelNdd-129" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="410" />
+              <mxPoint x="750" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-133" value="Verifica cache redis" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-131" vertex="1" connectable="0">
+          <mxGeometry x="0.0011" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-88" value="Clientes" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="440.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-89" value="&lt;div&gt;RDS&lt;/div&gt;db_clientes" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.rds;fillColor=#2E73B8;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="554" y="430" width="72" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-95" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-96" target="GviSDebqHvodrFMelNdd-97" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-96" target="GviSDebqHvodrFMelNdd-129" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="560" />
+              <mxPoint x="769" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-132" value="Verifica cache redis" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-130" vertex="1" connectable="0">
+          <mxGeometry x="-0.1353" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-96" target="GviSDebqHvodrFMelNdd-116" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="720" />
+              <mxPoint x="1010" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-142" value="Consultar Status da Entrega" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-141" vertex="1" connectable="0">
+          <mxGeometry x="-0.0185" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-96" value="Pedidos" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="595.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-97" value="&lt;div&gt;RDS&lt;/div&gt;db_pedidos" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.rds;fillColor=#2E73B8;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="554" y="585" width="72" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-110" value="&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;AWS SQS&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;processa_pedidos&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;Verificar validade cartão.&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="12" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-101" target="GviSDebqHvodrFMelNdd-123" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-127" value="Envia para&lt;div&gt;fila se pagamento&lt;/div&gt;&lt;div&gt;confirmado&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-126" vertex="1" connectable="0">
+          <mxGeometry x="-0.2802" relative="1" as="geometry">
+            <mxPoint x="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="GviSDebqHvodrFMelNdd-101" target="GviSDebqHvodrFMelNdd-96">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="850" />
+              <mxPoint x="420" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-28" value="Atualiza Status Pagamento" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Z1I42a4XKH3U9Z4pWpdQ-27">
+          <mxGeometry x="-0.0803" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-101" value="AWS Lamba&lt;div&gt;Processa Pedido&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="555.5" y="973" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-116" value="Entregas" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
+          <mxGeometry x="970" y="979" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-117" value="DynamoDB&lt;br&gt;db_entregas" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.dynamo_db;fillColor=#2E73B8;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1169" y="968.5" width="72" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-118" value="AWS SQS&lt;br&gt;processa_pedidos" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" parent="1" vertex="1">
+          <mxGeometry x="351" y="970" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="GviSDebqHvodrFMelNdd-96" target="GviSDebqHvodrFMelNdd-118" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-121" value="Envia para fila" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-119" vertex="1" connectable="0">
+          <mxGeometry x="-0.2077" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="GviSDebqHvodrFMelNdd-118" target="GviSDebqHvodrFMelNdd-101" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-122" value="Lambda&amp;nbsp;&lt;div&gt;Consome&lt;br&gt;Pedidos&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-120" vertex="1" connectable="0">
+          <mxGeometry x="-0.1909" y="1" relative="1" as="geometry">
+            <mxPoint x="5" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="GviSDebqHvodrFMelNdd-123" target="GviSDebqHvodrFMelNdd-116" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-128" value="API&lt;br&gt;Consome&lt;br&gt;Entregas" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-125" vertex="1" connectable="0">
+          <mxGeometry x="0.0332" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-123" value="AWS SQS&lt;br&gt;processa_entregas" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" parent="1" vertex="1">
+          <mxGeometry x="770" y="968.5" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="GviSDebqHvodrFMelNdd-116" target="GviSDebqHvodrFMelNdd-117" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-129" value="ElasticCache for Redis" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#C925D1;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.elasticache_for_redis;" parent="1" vertex="1">
+          <mxGeometry x="730" y="436" width="78" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="GviSDebqHvodrFMelNdd-136" target="GviSDebqHvodrFMelNdd-116" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-140" value="Recebe os produtos a entregar com base na regra do CEP&lt;div&gt;Atualiza status da entrega&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-139" vertex="1" connectable="0">
+          <mxGeometry x="-0.2089" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-136" value="Entregador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="1015" y="1200" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-143" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1070" y="979" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1070" y="979" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-146" value="Consultar status da Entrega" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-144" vertex="1" connectable="0">
+          <mxGeometry x="-0.1104" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GviSDebqHvodrFMelNdd-143" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="1057" y="500.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GviSDebqHvodrFMelNdd-79" target="Z1I42a4XKH3U9Z4pWpdQ-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="165" y="790" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="380" />
+              <mxPoint x="280" y="380" />
+              <mxPoint x="280" y="770" />
+              <mxPoint x="189" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GviSDebqHvodrFMelNdd-88" target="Z1I42a4XKH3U9Z4pWpdQ-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="520" />
+              <mxPoint x="300" y="520" />
+              <mxPoint x="300" y="859" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GviSDebqHvodrFMelNdd-96" target="Z1I42a4XKH3U9Z4pWpdQ-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="879" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-11" value="AWS SQS&lt;div&gt;envia_emails&lt;/div&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
+          <mxGeometry x="150" y="820" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GviSDebqHvodrFMelNdd-116" target="Z1I42a4XKH3U9Z4pWpdQ-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="1210" />
+              <mxPoint x="170" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-17" value="Envia email com status da entrega para o Cliente" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Z1I42a4XKH3U9Z4pWpdQ-16">
+          <mxGeometry x="-0.1039" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Z1I42a4XKH3U9Z4pWpdQ-18" target="Z1I42a4XKH3U9Z4pWpdQ-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-24" value="Envia emails&lt;div&gt;para Cliente&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Z1I42a4XKH3U9Z4pWpdQ-23">
+          <mxGeometry x="0.033" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-18" value="AWS Lambda&lt;div&gt;Envia e-mails Genéricos&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-49" y="823" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Z1I42a4XKH3U9Z4pWpdQ-11" target="Z1I42a4XKH3U9Z4pWpdQ-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-20" value="Consome&lt;div&gt;emails&lt;/div&gt;&lt;div&gt;pendentes&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Z1I42a4XKH3U9Z4pWpdQ-19">
+          <mxGeometry x="0.1205" y="1" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-22" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-260" y="829" width="30" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
