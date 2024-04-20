@@ -83,4 +83,24 @@ services:
       timeout: 5s
       retries: 5
 
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - '4566:4566' # LocalStack endpoint
+      - '4510-4559:4510-4559' # external services port range
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - DEFAULT_REGION=us-east-1
+    volumes:
+      - ./script-localstack/localstack-script.sh:/etc/localstack/init/ready.d/script.sh
+      - ./script-localstack/init-dynamodb.sh:/etc/localstack/init/ready.d/init-dynamodb.sh
+      - '/var/run/docker.sock:/var/run/docker.sock'
+
+  redis:
+    image: redis
+    command: redis-server --requirepass Redis2024!
+    ports:
+      - "6379:6379"
+
+
 
