@@ -1875,3 +1875,4 @@
 /postgres/postgresql.auto.conf
 /postgres/postgresql.conf
 /postgres/postmaster.opts
+/postgres/postmaster.pid
