@@ -1,55 +1,55 @@
 services:
-  gateway-service:
-     image: 'gateway-service:latest'
-     build:
-       context: ../gateway-service
-     container_name: gateway-service
-     ports:
-       - 80:80
-     depends_on:
-       - produtos-app
-       - clientes-app
-         #- pedidos-app
-         #- entregas-app
+  # gateway-service:
+  #    image: 'gateway-service:latest'
+  #    build:
+  #      context: ../gateway-service
+  #    container_name: gateway-service
+  #    ports:
+  #      - 80:80
+  #    depends_on:
+  #      - produtos-app
+  #      - clientes-app
+  #        #- pedidos-app
+  #        #- entregas-app
 
-  produtos-app:
-     image: 'produtos-app:latest'
-     build:
-       context: ../produtos-app
-     container_name: produtos-app
-     ports:
-       - 8080:8080
-     depends_on:
-       db:
-         condition: service_healthy
-     environment:
-       - DATASOURCE_URL=jdbc:postgresql://db:5432/db_produtos
-       - DATASOURCE_USERNAME=postgres
-       - DATASOURCE_PASSWORD=teste123
-       - AWS_DEFAULT_REGION=us-east-1
-       - AWS_ACCESS_KEY=AKIAZSRR2TF42AH4EETO
-       - AWS_SECRET_KEY=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
-       - AWS_ENDPOINT=http://localhost:4566
+  # produtos-app:
+  #    image: 'produtos-app:latest'
+  #    build:
+  #      context: ../produtos-app
+  #    container_name: produtos-app
+  #    ports:
+  #      - 8080:8080
+  #    depends_on:
+  #      db:
+  #        condition: service_healthy
+  #    environment:
+  #      - DATASOURCE_URL=jdbc:postgresql://db:5432/db_produtos
+  #      - DATASOURCE_USERNAME=postgres
+  #      - DATASOURCE_PASSWORD=teste123
+  #      - AWS_DEFAULT_REGION=us-east-1
+  #      - AWS_ACCESS_KEY=AKIAZSRR2TF42AH4EETO
+  #      - AWS_SECRET_KEY=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
+  #      - AWS_ENDPOINT=http://localhost:4566
 
-  clientes-app:
-     image: 'clientes-app:latest'
-     build:
-       context: ../clientes-app
-     container_name: clientes-app
-     ports:
-       - 8081:80
-     depends_on:
-       db:
-         condition: service_healthy
-     environment:
-       - DATASOURCE_URL=jdbc:postgresql://db:5432/db_clientes
-       - DATASOURCE_USERNAME=postgres
-       - DATASOURCE_PASSWORD=teste123
-       - AWS_DEFAULT_REGION=us-east-1
-       - AWS_ACCESS_KEY=AKIAZSRR2TF42AH4EETO
-       - AWS_SECRET_KEY=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
-       - AWS_ENDPOINT=http://localhost:4566
-       - AWS_QUEUE=envia_emails
+  # clientes-app:
+  #    image: 'clientes-app:latest'
+  #    build:
+  #      context: ../clientes-app
+  #    container_name: clientes-app
+  #    ports:
+  #      - 8081:80
+  #    depends_on:
+  #      db:
+  #        condition: service_healthy
+  #    environment:
+  #      - DATASOURCE_URL=jdbc:postgresql://db:5432/db_clientes
+  #      - DATASOURCE_USERNAME=postgres
+  #      - DATASOURCE_PASSWORD=teste123
+  #      - AWS_DEFAULT_REGION=us-east-1
+  #      - AWS_ACCESS_KEY=AKIAZSRR2TF42AH4EETO
+  #      - AWS_SECRET_KEY=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
+  #      - AWS_ENDPOINT=http://localhost:4566
+  #      - AWS_QUEUE=envia_emails
 
 #  pedidos-app:
 #    image: 'pedidos-app:latest'
@@ -137,22 +137,22 @@ services:
       - REDIS_PORT=6379
       - REDIS_DATABASES=1
 
-  keycloak:
-    container_name: keycloak
-    image: quay.io/keycloak/keycloak
-    environment:
-      - KEYCLOAK_ADMIN=admin
-      - KEYCLOAK_ADMIN_PASSWORD=admin
-      - KC_DB=postgres
-      - KC_DB_USERNAME=postgres
-      - KC_DB_PASSWORD=teste123
-      - KC_DB_URL_HOST=db
-      - KC_DB_URL_PORT=5432
-    ports:
-      - 8090:8080
-    command:
-      [ "start-dev","--import-realm" ]
-    volumes:
-      - ../keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json
-    depends_on:
-      - db
+  # keycloak:
+  #   container_name: keycloak
+  #   image: quay.io/keycloak/keycloak
+  #   environment:
+  #     - KEYCLOAK_ADMIN=admin
+  #     - KEYCLOAK_ADMIN_PASSWORD=admin
+  #     - KC_DB=postgres
+  #     - KC_DB_USERNAME=postgres
+  #     - KC_DB_PASSWORD=teste123
+  #     - KC_DB_URL_HOST=db
+  #     - KC_DB_URL_PORT=5432
+  #   ports:
+  #     - 8090:8080
+  #   command:
+  #     [ "start-dev","--import-realm" ]
+  #   volumes:
+  #     - ../keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json
+  #   depends_on:
+  #     - db
