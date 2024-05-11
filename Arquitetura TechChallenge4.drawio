@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-05-11T19:00:35.231Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="YPvpyth1YlsawFLAkVhf" version="24.2.5" type="device">
+<mxfile host="Electron" modified="2024-05-11T19:10:38.076Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="6Zsftdn4qXriVtCexE8G" version="24.2.5" type="device">
   <diagram name="Página-1" id="X4yGat1UL4yKTtZNy6NT">
     <mxGraphModel dx="2034" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -91,19 +91,6 @@
         <mxCell id="GviSDebqHvodrFMelNdd-95" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-96" target="GviSDebqHvodrFMelNdd-97" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="GviSDebqHvodrFMelNdd-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="GviSDebqHvodrFMelNdd-96" target="GviSDebqHvodrFMelNdd-116" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="330" y="1010" />
-              <mxPoint x="930" y="1010" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="GviSDebqHvodrFMelNdd-142" value="Consultar Status da Entrega" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="GviSDebqHvodrFMelNdd-141" vertex="1" connectable="0">
-          <mxGeometry x="-0.0185" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="7g0iQvHUmDkomxm3N5RD-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="GviSDebqHvodrFMelNdd-96" target="GviSDebqHvodrFMelNdd-88">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -139,6 +126,19 @@
         </mxCell>
         <mxCell id="GviSDebqHvodrFMelNdd-101" value="AWS Lamba&lt;div&gt;Processa Pedido&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" parent="1" vertex="1">
           <mxGeometry x="475.5" y="1263" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="7g0iQvHUmDkomxm3N5RD-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="GviSDebqHvodrFMelNdd-116" target="GviSDebqHvodrFMelNdd-96">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="1020" />
+              <mxPoint x="360" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7g0iQvHUmDkomxm3N5RD-37" value="Atualiza Status da Entrega" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="7g0iQvHUmDkomxm3N5RD-36">
+          <mxGeometry x="0.1466" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="GviSDebqHvodrFMelNdd-116" value="Entregas" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
           <mxGeometry x="890" y="1269" width="120" height="60" as="geometry" />
