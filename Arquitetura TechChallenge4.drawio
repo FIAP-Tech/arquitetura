@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-05-11T19:10:38.076Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="6Zsftdn4qXriVtCexE8G" version="24.2.5" type="device">
+<mxfile host="Electron" modified="2024-05-15T02:46:28.389Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="aTMf5kOaYJPF9Eray1W0" version="24.2.5" type="device">
   <diagram name="Página-1" id="X4yGat1UL4yKTtZNy6NT">
     <mxGraphModel dx="2034" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -205,17 +205,6 @@
         </mxCell>
         <mxCell id="GviSDebqHvodrFMelNdd-143" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="977" y="790.5" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="GviSDebqHvodrFMelNdd-79" target="Z1I42a4XKH3U9Z4pWpdQ-11" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="85" y="1080" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="310" y="670" />
-              <mxPoint x="200" y="670" />
-              <mxPoint x="200" y="1060" />
-              <mxPoint x="109" y="1060" />
-            </Array>
-          </mxGeometry>
         </mxCell>
         <mxCell id="Z1I42a4XKH3U9Z4pWpdQ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="GviSDebqHvodrFMelNdd-88" target="Z1I42a4XKH3U9Z4pWpdQ-11" edge="1">
           <mxGeometry relative="1" as="geometry">
