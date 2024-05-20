@@ -10,7 +10,7 @@ services:
        - produtos-app
        - clientes-app
        - pedidos-app
-       #- entregas-app
+       - entregas-app
 
    produtos-app:
       image: 'produtos-app:latest'
