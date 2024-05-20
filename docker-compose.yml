@@ -1,4 +1,17 @@
 services:
+   api-gateway:
+     image: 'api-gateway:latest'
+     build:
+       context: ../api-gateway
+     container_name: api-gateway
+     ports:
+       - 8080:8080
+     depends_on:
+       - produtos-app
+       - clientes-app
+       - pedidos-app
+       #- entregas-app
+
    produtos-app:
       image: 'produtos-app:latest'
       build:
