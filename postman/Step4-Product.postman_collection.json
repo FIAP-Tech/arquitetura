@@ -93,7 +93,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL3Byb2R1dG9zIiwiYXV0aF90aW1lIjoxNzE2MjA5NzEzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV80dkVCMGZveFQiLCJleHAiOjE3MTYyMTMzMTMsImlhdCI6MTcxNjIwOTcxMywidmVyc2lvbiI6MiwianRpIjoiZjM0MTg0ZTQtNjQ0MC00YmQzLThmZDktMTliNWExZjM3NDY2IiwiY2xpZW50X2lkIjoiMjBuNjRydXFlcDU2czQxbTdtZzNzdHV2a3YifQ.KJxWoIsJbTefbvdMOXNOPPYTrzCOj7Yhu1RRIFsZoM9nsQVyT-ywSdi9py3DAkRwV28fKMQ-LKq6GhM1rzflL9e7SPtJi3LYD7X1EvRdxfed49g14KSz9ItN1IWT3pTb8vCK9jN2E-jA5Is2SdDDTuznMRh2bldBDQtumWDx3ofnG6pzTD9_27Mri5obfkvltj_OYnJcgsjP00veTseub0aPw844yT2ctTgnWc0BjD-7vAKomFcfD0R2EvoYoUD765NyASdu3m255r8mMD1v0RPhtL5ps4zE0FnCXZohkGToLdHLvkystPD59ZLraIrA02ebBPpgJ_5ArJvoN4eJgA",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL3Byb2R1dG9zIiwiYXV0aF90aW1lIjoxNzE2MjE5MDA0LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV80dkVCMGZveFQiLCJleHAiOjE3MTYyMjI2MDQsImlhdCI6MTcxNjIxOTAwNCwidmVyc2lvbiI6MiwianRpIjoiZWU0YjY1OTktNDBhOC00ZDY1LThjNGQtMjViOGU2OTA1ZTFjIiwiY2xpZW50X2lkIjoiMjBuNjRydXFlcDU2czQxbTdtZzNzdHV2a3YifQ.Ig5rgjxuo62dp6LW5tCM4DofqIgFo_OHKTUpcbAMoG59alZMC-StgiG8W6RciE2K_61Glecg1G76Mx_P8dwR704YSooaKYs_YkoE50n6PNJw_LWg3gueaUmAEGo2LdDFN3kQy3_d4vV93j5DAIDYquIVjh9kaDU0j4cX09-1EI9QWXBwgwXzaLMc1-D7wboRCi-ZdlsGG0Z1apGSXMrTHuWP87CRiDFkI-NZzAMfBs9JowEXnXyE0elrs675ypOWAy1CID8qRLDCitiadTQw7wcBhm9yarvOd2-prc5nk_KB8QZ35Cz5hfgK1x009MOWsBhp83Baycj1SQRrVouj0g",
 									"type": "string"
 								}
 							]
@@ -110,9 +110,9 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "file",
+									"key": "File",
 									"type": "file",
-									"src": "/home/jefferson/lab/step4/github/arquitetura/carga_produtos/produtos.csv"
+									"src": "/C:/Users/Jeff/Downloads/produtos.csv"
 								}
 							]
 						},
@@ -894,6 +894,16 @@
 				{
 					"name": "POST Entregas",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL2VudHJlZ2FzIiwiYXV0aF90aW1lIjoxNzE2MjUxNDE2LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV80dkVCMGZveFQiLCJleHAiOjE3MTYyNTUwMTYsImlhdCI6MTcxNjI1MTQxNiwidmVyc2lvbiI6MiwianRpIjoiYzE0YjM4MzctNzg1NS00MjgxLTlkMWEtNDQ2MjU4NDlkNGYxIiwiY2xpZW50X2lkIjoiMjBuNjRydXFlcDU2czQxbTdtZzNzdHV2a3YifQ.0-xcc6JRuKYTZ_jWjwCPmiLKXinzKk9Qu-ERmXepvg-I01we9z1RIAVQzcxQ9irlQJ-qYUPRQg9RDe4KTEpxwsqTZAFdUzneCseHKsccHr51wBhCnvMbxeSu98zd5m_hcS0AejCBBAWvutTVKLSO-TMDL-hDUcHaEdrj15Wei0wEXIU1S-lVz_Jt4400IpsB9dQjP0uT5FJPcPU1Z47zrUyxHSaZIbOo3exQxliwBOzVYy-02ZZWvqWFOK7oYU_RInNsnarHopdx8t3SRoN-eizah_BkHadDDjQxIcnEXK5X3ZR1Hy5DKTdrt1wUq90wx_MGm9ODxzgZuqAHMqwkJg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -906,16 +916,19 @@
 							}
 						},
 						"url": {
-							"raw": "https://entregas-app-step4-02e5d4528012.herokuapp.com/api/entregas",
+							"raw": "https://ej9cwds712.execute-api.us-east-1.amazonaws.com/api/entregas/criar",
 							"protocol": "https",
 							"host": [
-								"entregas-app-step4-02e5d4528012",
-								"herokuapp",
+								"ej9cwds712",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
 								"com"
 							],
 							"path": [
 								"api",
-								"entregas"
+								"entregas",
+								"criar"
 							]
 						}
 					},
@@ -924,19 +937,33 @@
 				{
 					"name": "GET Entregas",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL2VudHJlZ2FzIiwiYXV0aF90aW1lIjoxNzE2MjUxNDE2LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV80dkVCMGZveFQiLCJleHAiOjE3MTYyNTUwMTYsImlhdCI6MTcxNjI1MTQxNiwidmVyc2lvbiI6MiwianRpIjoiYzE0YjM4MzctNzg1NS00MjgxLTlkMWEtNDQ2MjU4NDlkNGYxIiwiY2xpZW50X2lkIjoiMjBuNjRydXFlcDU2czQxbTdtZzNzdHV2a3YifQ.0-xcc6JRuKYTZ_jWjwCPmiLKXinzKk9Qu-ERmXepvg-I01we9z1RIAVQzcxQ9irlQJ-qYUPRQg9RDe4KTEpxwsqTZAFdUzneCseHKsccHr51wBhCnvMbxeSu98zd5m_hcS0AejCBBAWvutTVKLSO-TMDL-hDUcHaEdrj15Wei0wEXIU1S-lVz_Jt4400IpsB9dQjP0uT5FJPcPU1Z47zrUyxHSaZIbOo3exQxliwBOzVYy-02ZZWvqWFOK7oYU_RInNsnarHopdx8t3SRoN-eizah_BkHadDDjQxIcnEXK5X3ZR1Hy5DKTdrt1wUq90wx_MGm9ODxzgZuqAHMqwkJg",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://entregas-app-step4-02e5d4528012.herokuapp.com/api/entregas",
+							"raw": "https://ej9cwds712.execute-api.us-east-1.amazonaws.com/api/entregas/obter/tudo",
 							"protocol": "https",
 							"host": [
-								"entregas-app-step4-02e5d4528012",
-								"herokuapp",
+								"ej9cwds712",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
 								"com"
 							],
 							"path": [
 								"api",
-								"entregas"
+								"entregas",
+								"obter",
+								"tudo"
 							]
 						}
 					},
@@ -948,17 +975,21 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://entregas-app-step4-02e5d4528012.herokuapp.com/api/entregas/3",
+							"raw": "https://ej9cwds712.execute-api.us-east-1.amazonaws.com/api/entregas/obter/porId/4",
 							"protocol": "https",
 							"host": [
-								"entregas-app-step4-02e5d4528012",
-								"herokuapp",
+								"ej9cwds712",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
 								"com"
 							],
 							"path": [
 								"api",
 								"entregas",
-								"3"
+								"obter",
+								"porId",
+								"4"
 							]
 						}
 					},
@@ -979,16 +1010,19 @@
 							}
 						},
 						"url": {
-							"raw": "https://entregas-app-step4-02e5d4528012.herokuapp.com/api/entregas/4",
+							"raw": "https://ej9cwds712.execute-api.us-east-1.amazonaws.com/api/entregas/editar/4",
 							"protocol": "https",
 							"host": [
-								"entregas-app-step4-02e5d4528012",
-								"herokuapp",
+								"ej9cwds712",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
 								"com"
 							],
 							"path": [
 								"api",
 								"entregas",
+								"editar",
 								"4"
 							]
 						}
@@ -1001,16 +1035,19 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://entregas-app-step4-02e5d4528012.herokuapp.com/api/entregas/4",
+							"raw": "https://ej9cwds712.execute-api.us-east-1.amazonaws.com/api/entregas/deletar/4",
 							"protocol": "https",
 							"host": [
-								"entregas-app-step4-02e5d4528012",
-								"herokuapp",
+								"ej9cwds712",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
 								"com"
 							],
 							"path": [
 								"api",
 								"entregas",
+								"deletar",
 								"4"
 							]
 						}
