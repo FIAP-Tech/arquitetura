@@ -1,9 +1,9 @@
 #!/bin/bash
 
-awslocal sqs create-queue --queue-name envia_emails
+awslocal sqs create-queue --queue-name envia-emails
 
-awslocal sqs create-queue --queue-name processa_pedidos
+awslocal sqs create-queue --queue-name processa-pedidos
 
-awslocal sqs create-queue --queue-name processa_entregas
+awslocal sqs create-queue --queue-name processa-entregas
 
 
