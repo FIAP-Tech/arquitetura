@@ -30,4 +30,3 @@ target/
 .mvn/
 
 ajcore*
-/postgres/
