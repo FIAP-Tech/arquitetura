@@ -1,0 +1,116 @@
+services:
+  tech5-usuarios-app:
+    image: 'tech5-usuarios-app:latest'
+    build:
+      context: ../tech5-usuarios-app
+    container_name: tech5-usuarios-app
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://db:5432/db_clientes
+      - DATASOURCE_USERNAME=${DATASOURCE_USERNAME}
+      - DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD}
+
+  tech5-gestao-itens-app:
+    image: 'tech5-gestao-itens-app:latest'
+    build:
+      context: ../tech5-gestao-itens-app
+    container_name: tech5-gestao-itens-app
+    ports:
+      - 8081:8081
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://db:5432/db_produtos
+      - DATASOURCE_USERNAME=${DATASOURCE_USERNAME}
+      - DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD}
+
+  tech5-pagamentos-app:
+    image: 'tech5-pagamentos-app:latest'
+    build:
+      context: ../tech5-pagamentos-app
+    container_name: tech5-pagamentos-app
+    ports:
+      - 8083:8083
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://db:5432/db_pagamentos
+      - DATASOURCE_USERNAME=${DATASOURCE_USERNAME}
+      - DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD}
+
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USERNAME: ${DATASOURCE_USERNAME}
+      POSTGRES_PASSWORD: ${DATASOURCE_PASSWORD}
+      POSTGRES_MULTIPLE_DATABASES: db_produtos, db_clientes, db_pedidos, db_pagamentos, db_sonarqube
+    volumes:
+      - ./scripts/multiple-databases.sh:/docker-entrypoint-initdb.d/multiple-databases.sh
+      - ./postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqube_security
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://db:5432/db_sonarqube
+      SONAR_JDBC_USERNAME: ${DATASOURCE_USERNAME}
+      SONAR_JDBC_PASSWORD: ${DATASOURCE_PASSWORD}
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: true
+    volumes:
+      - 'sonarqube_data:/opt/sonarqube/data'
+      - 'sonarqube_extensions:/opt/sonarqube/extensions'
+      - 'sonarqube_logs:/opt/sonarqube/logs'
+    ports:
+      - "9090:9000"
+
+  dtrack-apiserver:
+    image: dependencytrack/apiserver
+    deploy:
+      resources:
+        limits:
+          memory: 12288m
+        reservations:
+          memory: 8192m
+      restart_policy:
+        condition: on-failure
+    ports:
+      - '9999:8080'
+    volumes:
+      - 'dependency-track:/data'
+    restart: unless-stopped
+
+  dtrack-frontend:
+    image: dependencytrack/frontend
+    depends_on:
+      - dtrack-apiserver
+    environment:
+      - API_BASE_URL=http://localhost:9999
+    ports:
+      - "11000:8080"
+    restart: unless-stopped
+
+volumes:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  dependency-track:

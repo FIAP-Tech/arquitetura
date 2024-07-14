@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "eba3b865-af41-411f-9b0b-2e43c808f225",
+		"name": "Step5 - Grupo 58",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16170565"
+	},
+	"item": [
+		{
+			"name": "(1) Usuários",
+			"item": [
+				{
+					"name": "(1) Registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Ricardo\",\n    \"username\":\"ricardo.lara2\",\n    \"password\":\"teste123\",\n    \"email\": \"ricardo@gmail.com\",\n    \"role\": \"ROLE_ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(2) Todos Usuários",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Ricardo\",\n    \"username\":\"ricardo.lara\",\n    \"password\":\"teste123\",\n    \"email\": \"ricardo@gmail.com\",\n    \"role\": \"ROLE_USER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(3) Autenticar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"ricardo.lara2\",\n    \"password\":\"teste123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/autenticar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"autenticar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "(2) Produtos",
+			"item": [
+				{
+					"name": "POST Produto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0FETUlOIl0sInN1YiI6InJpY2FyZG8ubGFyYTIiLCJpYXQiOjE3MjA4MzM2OTAsImV4cCI6MTcyMDgzNDI5MH0.ivlzGJDDr6c5zEhUhhNsLfFkH_QPUeCVRHAsty0KPQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Camiseta 2\",\n    \"description\":\"Para usar no dia a dia\",\n    \"quantity\": 10,\n    \"price\": 10.55\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET AllProdutos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0FETUlOIl0sInN1YiI6InJpY2FyZG8ubGFyYTIiLCJpYXQiOjE3MjA4MzM2OTAsImV4cCI6MTcyMDgzNDI5MH0.ivlzGJDDr6c5zEhUhhNsLfFkH_QPUeCVRHAsty0KPQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ProdutosById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL3Byb2R1dG9zIiwiYXV0aF90aW1lIjoxNzE1OTc2NDgwLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV80dkVCMGZveFQiLCJleHAiOjE3MTU5ODAwODAsImlhdCI6MTcxNTk3NjQ4MCwidmVyc2lvbiI6MiwianRpIjoiYmQzY2FjY2QtZjgxZi00YWQ2LThmMjYtZjE5Y2M5MzEyN2I2IiwiY2xpZW50X2lkIjoiMjBuNjRydXFlcDU2czQxbTdtZzNzdHV2a3YifQ.dHGqW6HO7eGabTpZ2I58uLcRmHRr2i0qjIdGd__wlR_ofiF1oQADGVaLxPrXMfvccrD8_XZba32Y4j8P_Dhzu8m9lMLJgmymNj5K8W5k-3hKxKiBWz_f6cUqvfNmPuqi6MOWv52FPl8yv8SM7xHAWArCFW1-b1bn2y9KREru9tgu4R4LrVgIfREElRTmxHGaqmY51m6WiaCYU2AmBCa8gxxqOEzz3bRE2C5-vXSwPSTLlOtVk06Xw-lUuOuBFNpA2BHkwUKnaJyO55ysXQSjyIMzb0x224YH8IA7rHEoU-YBCo0HbYsM3T1WoOLr4blB4fx5JQ02yr-IY-cDiQb2gg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/produtos/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"produtos",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT UpdateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL3Byb2R1dG9zIiwiYXV0aF90aW1lIjoxNzE1OTc2NDgwLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV80dkVCMGZveFQiLCJleHAiOjE3MTU5ODAwODAsImlhdCI6MTcxNTk3NjQ4MCwidmVyc2lvbiI6MiwianRpIjoiYmQzY2FjY2QtZjgxZi00YWQ2LThmMjYtZjE5Y2M5MzEyN2I2IiwiY2xpZW50X2lkIjoiMjBuNjRydXFlcDU2czQxbTdtZzNzdHV2a3YifQ.dHGqW6HO7eGabTpZ2I58uLcRmHRr2i0qjIdGd__wlR_ofiF1oQADGVaLxPrXMfvccrD8_XZba32Y4j8P_Dhzu8m9lMLJgmymNj5K8W5k-3hKxKiBWz_f6cUqvfNmPuqi6MOWv52FPl8yv8SM7xHAWArCFW1-b1bn2y9KREru9tgu4R4LrVgIfREElRTmxHGaqmY51m6WiaCYU2AmBCa8gxxqOEzz3bRE2C5-vXSwPSTLlOtVk06Xw-lUuOuBFNpA2BHkwUKnaJyO55ysXQSjyIMzb0x224YH8IA7rHEoU-YBCo0HbYsM3T1WoOLr4blB4fx5JQ02yr-IY-cDiQb2gg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Android 14\",\n    \"description\": \"Smartphone muito bom!\",\n     \"quantity\": 100,\n    \"price\": 50.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/produtos/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"produtos",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE DeleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL3Byb2R1dG9zIiwiYXV0aF90aW1lIjoxNzE1OTc2NDgwLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV80dkVCMGZveFQiLCJleHAiOjE3MTU5ODAwODAsImlhdCI6MTcxNTk3NjQ4MCwidmVyc2lvbiI6MiwianRpIjoiYmQzY2FjY2QtZjgxZi00YWQ2LThmMjYtZjE5Y2M5MzEyN2I2IiwiY2xpZW50X2lkIjoiMjBuNjRydXFlcDU2czQxbTdtZzNzdHV2a3YifQ.dHGqW6HO7eGabTpZ2I58uLcRmHRr2i0qjIdGd__wlR_ofiF1oQADGVaLxPrXMfvccrD8_XZba32Y4j8P_Dhzu8m9lMLJgmymNj5K8W5k-3hKxKiBWz_f6cUqvfNmPuqi6MOWv52FPl8yv8SM7xHAWArCFW1-b1bn2y9KREru9tgu4R4LrVgIfREElRTmxHGaqmY51m6WiaCYU2AmBCa8gxxqOEzz3bRE2C5-vXSwPSTLlOtVk06Xw-lUuOuBFNpA2BHkwUKnaJyO55ysXQSjyIMzb0x224YH8IA7rHEoU-YBCo0HbYsM3T1WoOLr4blB4fx5JQ02yr-IY-cDiQb2gg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/produtos/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"produtos",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Atualizar Estoque",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL2NsaWVudGVzIiwiYXV0aF90aW1lIjoxNzE2MTcwMzQ5LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV80dkVCMGZveFQiLCJleHAiOjE3MTYxNzM5NDksImlhdCI6MTcxNjE3MDM0OSwidmVyc2lvbiI6MiwianRpIjoiODY4MTdkZjgtNGE3NS00NDIyLWE0MGEtYWVmYmNmZDI2YWI2IiwiY2xpZW50X2lkIjoiMjBuNjRydXFlcDU2czQxbTdtZzNzdHV2a3YifQ.n73t5NW0Yw8cVpzZyGRB8Hfet4-Gzq_Gg7gBS2zg3HMOJzS_KFt7Wz0fKOiVGPLan26JkK4_-9ifLmbX1HPQb50Ow9ZU5kFpXQ1lnDPS0Wz5OppWbxZ5nwadWHlfzC3giezMq0cAUbUxd9mMdnrUfQCeXEVmfGi3wCmsc7hGzueGNB88EcpzsKIr0U5PEIPP-P7HsobuULckSKxmgVYCq6HJOFlLrB_Kja3WihvjMDr4OxlcvJztJK4_XT1KFf4iEjbTz5FpqtU5akM4TeJgVGat4ku54VSceEWrHcD9iklolLyRNk3wK1mEkX5xXVVkUEtbNdzzrwJKdUSwWfzSSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"name\": \"Android 14\",\r\n        \"description\": \"Smartphone muito bom!\",\r\n        \"quantity\": 200,\r\n        \"price\": 50.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/produtos/2/atualizar-estoque",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"produtos",
+								"2",
+								"atualizar-estoque"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "(3) Pedidos",
+			"item": [
+				{
+					"name": "POST Pedidos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idCliente\": 1,\n  \"formaPagamento\": \"CARTAO_DEBITO\",\n  \"validadeFormaPagamentoCartao\": \"02/2028\",\n  \"pedidoProdutos\": [\n    {\n      \"idProduto\": 2,\n      \"quantidade\": 1\n    },\n    {\n      \"idProduto\": 3,\n      \"quantidade\": 1\n    },\n    {\n      \"idProduto\": 4,\n      \"quantidade\": 3\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Pedidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL3BlZGlkb3MiLCJhdXRoX3RpbWUiOjE3MTYwMDA0ODEsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xXzR2RUIwZm94VCIsImV4cCI6MTcxNjAwNDA4MSwiaWF0IjoxNzE2MDAwNDgxLCJ2ZXJzaW9uIjoyLCJqdGkiOiIwYzBkNTQ1Yi02NWMwLTQ1ZTItOGNhYS03MDBmY2E5ZjhlNmMiLCJjbGllbnRfaWQiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiJ9.xHHj-ifnwphfLmaBBI4z7yndJ9x4HPWADM8d7Sisv8CtRCqTp_3Z1SDqcYCAmy6q7WA_gpWAn5Os7IbGrubiPhhDgOo0jD69HB4j-ksMGva-Vd4RefeRV5r2wG9nyfQUr4OdQC4hqaDIG1LHJoFHtP_Z0mgK6qub90ONgjDjdUUpkOPq9Q8zHJahH_EepuxinRITgSoi4uFkqMgUuV3G1XWZlKerUow7t8yM0eeb2QRuYI7NMNLIxKpNfqImChNFVxdudKEbpIpocSWear6teTAVExnRSNdHtI8Z1to7gHrGynCKre8Ff9LiHR9lQLHcYo3Hc8RFBsGFOhOBXwqL_Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PedidosById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvclFyU1B3QlJhZlB4XC9ZZlRwVXk5dlZZUlRrSEdESnc2cGFRNUdxVDZaRT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoic3RlcDRhcGlcL3BlZGlkb3MiLCJhdXRoX3RpbWUiOjE3MTYwMDA0ODEsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xXzR2RUIwZm94VCIsImV4cCI6MTcxNjAwNDA4MSwiaWF0IjoxNzE2MDAwNDgxLCJ2ZXJzaW9uIjoyLCJqdGkiOiIwYzBkNTQ1Yi02NWMwLTQ1ZTItOGNhYS03MDBmY2E5ZjhlNmMiLCJjbGllbnRfaWQiOiIyMG42NHJ1cWVwNTZzNDFtN21nM3N0dXZrdiJ9.xHHj-ifnwphfLmaBBI4z7yndJ9x4HPWADM8d7Sisv8CtRCqTp_3Z1SDqcYCAmy6q7WA_gpWAn5Os7IbGrubiPhhDgOo0jD69HB4j-ksMGva-Vd4RefeRV5r2wG9nyfQUr4OdQC4hqaDIG1LHJoFHtP_Z0mgK6qub90ONgjDjdUUpkOPq9Q8zHJahH_EepuxinRITgSoi4uFkqMgUuV3G1XWZlKerUow7t8yM0eeb2QRuYI7NMNLIxKpNfqImChNFVxdudKEbpIpocSWear6teTAVExnRSNdHtI8Z1to7gHrGynCKre8Ff9LiHR9lQLHcYo3Hc8RFBsGFOhOBXwqL_Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/pedidos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"pedidos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "(4) Pagamentos",
+			"item": []
+		}
+	]
+}
