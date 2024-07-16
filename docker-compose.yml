@@ -11,7 +11,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      - DATASOURCE_URL=jdbc:postgresql://db:5432/db_clientes
+      - DATASOURCE_URL=jdbc:postgresql://db:5432/db_usuarios
       - DATASOURCE_USERNAME=${DATASOURCE_USERNAME}
       - DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD}
 
@@ -31,6 +31,25 @@ services:
       - DATASOURCE_USERNAME=${DATASOURCE_USERNAME}
       - DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD}
 
+
+  tech5-carrinho-compras-app:
+    image: 'tech5-carrinho-compras-app:latest'
+    build:
+      context: ../tech5-carrinho-compras-app
+    container_name: tech5-carrinho-compras-app
+    ports:
+      - 8082:8082
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://db:5432/db_compras
+      - DATASOURCE_USERNAME=${DATASOURCE_USERNAME}
+      - DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD}
+      - API_USUARIO_ENDPOINT=http://tech5-usuarios-app:8080/api/usuarios
+      - API_PRODUTO_ENDPOINT=http://tech5-gestao-itens-app:8081/api/produtos
+
   tech5-pagamentos-app:
     image: 'tech5-pagamentos-app:latest'
     build:
@@ -38,6 +57,7 @@ services:
     container_name: tech5-pagamentos-app
     ports:
       - 8083:8083
+    restart: always
     depends_on:
       db:
         condition: service_healthy
@@ -55,7 +75,7 @@ services:
     environment:
       POSTGRES_USERNAME: ${DATASOURCE_USERNAME}
       POSTGRES_PASSWORD: ${DATASOURCE_PASSWORD}
-      POSTGRES_MULTIPLE_DATABASES: db_produtos, db_clientes, db_pedidos, db_pagamentos, db_sonarqube
+      POSTGRES_MULTIPLE_DATABASES: db_produtos, db_usuarios, db_compras, db_pagamentos, db_sonarqube
     volumes:
       - ./scripts/multiple-databases.sh:/docker-entrypoint-initdb.d/multiple-databases.sh
       - ./postgres:/var/lib/postgresql/data
